@@ -1,12 +1,12 @@
 class BaseDetector{
-	boolean init(string name, string path){
-		this->detectorName = name;
-		setDefaultValues();
-		return loadModel(path);
-	}
+    boolean init(string name, string path){
+        this->detectorName = name;
+        setDefaultValues();
+        return loadModel(path);
+    }
 
-	void setDefaultValues(){
-		this->m_modelFileDir = "";
+    void setDefaultValues(){
+        this->m_modelFileDir = "";
         this->m_modelFileName = "";
         this->m_inputTensorWidth = 300;
         this->m_inputTensorHeight = 300;
@@ -15,16 +15,16 @@ class BaseDetector{
         this->m_detector = NULL;
         this->m_minBBoxArea = 0.0;
         this->m_minDetAreaThreshold = 0.15;
-		this->m_fBBoxScaleFactor = 1.10f;
+        this->m_fBBoxScaleFactor = 1.10f;
         this->m_currentFrameRotationWeight = 0.1f;
-	}
+    }
 
-	boolean loadModel(string path){
-		// TODO
-		//model loading logic goes here
-	}
+    boolean loadModel(string path){
+        // TODO
+        //model loading logic goes here
+    }
 
-	virtual void run(Image image) = 0;
+    virtual void run(Image image) = 0;
 
 
 }
@@ -33,17 +33,17 @@ class BaseDetector{
 
 class SSDDetector: BaseDetector{
 
-	void run(Image image) override {
-		//different output 
-	}	
+    void run(Image image) override {
+        //different output 
+    }   
 
 }
 
 
-class YellowDetector: BaseDetector{
+class YOLODetector: BaseDetector{
 
-	void run(Image image) override {
-		// different output
-	}
+    void run(Image image) override {
+        // different output
+    }
 
 }

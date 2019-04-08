@@ -18,12 +18,10 @@ class Rectangle{
 class Square extends Rectangle{
 
 	void setHeight(double height){
-		this.width = height;
 		this.height = height;
 	}
 
 	void setWidth(double width){
 		this.width = width;
-		this.height = width;
 	}
 }

@@ -16,15 +16,9 @@ public:
 
     virtual void reset() {};
 
-    virtual bool SetRoi(std::string& roi_str)
-    {
-        return false; // false: not implemented yet.
-    };
     virtual int Detect(const HVISIONUTIL::CRCMatrix& inImage, std::vector<HVISIONUTIL::DetectObjectInfo>& vOutDetResult)=0;
     virtual int Detect(const std::vector<HVISIONUTIL::CRCMatrix>& vInImages, std::vector<std::vector<HVISIONUTIL::DetectObjectInfo> >& vOutDetResults)=0;
-    virtual int GetBatchsize(void)=0;
 
-    static CFastDetector* CreateDetector(const std::string& name);
 
 protected:
     std::string m_detectorName;
