@@ -1,10 +1,13 @@
 ### Implement find command that takes input of file extension and a size ( it can be extended <, > , == for the size). The command will return list of files that satisifies these constraints
 
+```
 class File{
   string absolute_path;
   int size;
   int parent;
 };
+```
+```
 enum Params{type, size_equal, size_smaller, size_greater};
 class FilterHelper{
   vector<File> apply(Enum param, string value){
@@ -26,7 +29,9 @@ class FilterHelper{
   }
 }
 
+```
 
+```
 class Filter{
   vector<File> files;
   vector<pair<Params, string> arguments;
@@ -41,7 +46,9 @@ class Filter{
   
 };
 
+```
 
+```
 Class FindCommand{
     FindCommand(argc, char** args){
       
@@ -56,3 +63,4 @@ Class FindCommand{
       }
     }
 }
+```
